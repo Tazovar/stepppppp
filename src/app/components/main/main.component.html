@@ -1,0 +1,28 @@
+<div class="main_container" >
+    <form class="my_form" (ngSubmit)="onFromSubmit()">
+        <input type="text" name="userFirstName" [(ngModel)]="userFirstName" placeholder="name">
+        <input type="text" name="userLastName" [(ngModel)]="userLastName" placeholder="lastName">
+        <input type="text" [(ngModel)]="colorInputText" name="colorInpText">
+        <h1>{{colorInputText}}</h1>
+        <button type="submit">submit</button>
+        <ng-container *ngIf="usersArray.length > 0">            
+            <ng-container *ngFor="let user of usersArray">
+                <div class="user_container">
+                    <p>userName:{{user.name}}</p>
+                    <p>userLastName:{{user.lastName}}</p>
+                </div>
+                <div>
+                    <ng-container *ngFor="let word of user.color.split('');let i = index">
+                        <span [class]="`split_item split_item_${i}_${user.l}`">{{word}}</span>
+                    </ng-container>
+                    
+                </div>
+                <div class="color_container"  [style]="{'background-color':user.color}"></div> 
+            </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="usersArray.length == 0">
+            <p>იუზერები ჯერ არ დამატებულა</p>
+        </ng-container>
+    </form> 
+</div>
