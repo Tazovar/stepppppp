@@ -1,0 +1,16 @@
+<form (ngSubmit)="onFormSubmit()">
+    <div class="user_name_container">
+        <input type="text" placeholder="სახელი" name="name" [(ngModel)]="username">
+    </div>
+    <div class="user_lastname_container">
+        <input type="text" placeholder="გვარი" name="lastname" [(ngModel)]="userlastname">
+    </div>
+    <div class="user_status_container">
+        <select name="userstatus" [(ngModel)]="userstatus">
+            <option value="">აირჩიეთ</option>
+            <option [value]="true">აქტიური</option>
+            <option [value]="false">არააქტიური</option>
+        </select>
+    </div>
+    <button type="submit">submit</button>
+</form>

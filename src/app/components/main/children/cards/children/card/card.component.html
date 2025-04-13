@@ -1,0 +1,7 @@
+<div class="card">
+    <p>სახელი:{{myUser.name}}</p>
+    <p>გვარი:{{myUser.lastname}}</p>
+    <p>სტატუს:{{myUser.status == 'true' ? 'აქტიური' : 'არააქტიური'}}</p>
+    <div [class]="`status_container ${myUser.status == 'true' ? 'active' : 'notactive'}`" ></div>
+    <button (click)="onDeleteBtnClick()">delete</button>
+</div>

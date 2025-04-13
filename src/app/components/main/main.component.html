@@ -1,0 +1,14 @@
+<app-form (userObjectEmitter)="userObjectEmitterSub($event)"></app-form>
+
+
+
+<ng-container *ngIf="usersArray.length > 0">
+    <app-cards [usersArray]="usersArray"></app-cards>
+    </ng-container>
+
+
+
+
+    <ng-container *ngIf="usersArray.length == 0">
+        <p style="text-align: center;">იუზერი არ არსებობს</p>
+    </ng-container>

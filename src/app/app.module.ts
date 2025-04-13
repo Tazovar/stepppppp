@@ -3,13 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { PearentComponent } from './components/pearent/pearent.component';
-import { ChildComponent } from './components/child/child.component';
+import { MainComponent } from './components/main/main.component';
+import { FormComponent } from './components/main/children/form/form.component';
+import { CardsComponent } from './components/main/children/cards/cards.component';
+import { CardComponent } from './components/main/children/cards/children/card/card.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PearentComponent,
-    ChildComponent,
+    MainComponent,
+    FormComponent,
+    CardsComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
