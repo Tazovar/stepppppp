@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { MainComponent } from './components/main/main.component';
-import { FormComponent } from './components/form/form.component';
+import { PearentComponent } from './components/pearent/pearent.component';
+import { ChildComponent } from './components/child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
-    FormComponent,
+    PearentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,

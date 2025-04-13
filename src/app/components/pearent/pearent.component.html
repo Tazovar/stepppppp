@@ -1,0 +1,2 @@
+<input type="text" [(ngModel)]="text">
+<app-child [myTextFromPearent]="text" (myTextFromPearentEmitter)="myTextFromPearentEmitterSubscriber($event)"></app-child>
