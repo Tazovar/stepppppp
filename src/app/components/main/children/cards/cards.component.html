@@ -1,7 +1,0 @@
-
-
-    <div class="main_container">
-        <ng-container *ngFor="let user of usersArray;let myIndex = index">
-    <app-card [myUser]="user"  [index]="myIndex" (deleteEventEmitter)="deleteEventEmitterSub($event)"></app-card>
-        </ng-container>
-    </div>

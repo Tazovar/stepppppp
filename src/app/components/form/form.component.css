@@ -1,0 +1,21 @@
+input{
+    padding: 10px;
+    border: 1px solid black;
+    width: 400px;
+    margin: 10px 0px;
+}
+
+button[type="submit"]{
+    width: 400px;
+    padding: 10px;
+    border: 1px solid transparent;
+    background-color: black;
+    color: white;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+
+button[type="submit"]:hover{
+    opacity: 0.6;
+}

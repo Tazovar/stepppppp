@@ -8,17 +8,22 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class FormComponent {
   @Output() userObjectEmitter:EventEmitter<any> = new EventEmitter();
-  username:string = ''
-  userlastname:string = ''
-  userstatus:string = ''
+  username:string =  ''
+  userAge:string = ''
 
 
   onFormSubmit(){
     let userObject = {
       name:this.username,
-      lastname:this.userlastname,
-      status:this.userstatus
+      age:this.userAge
     }
+
     this.userObjectEmitter.emit(userObject);
+    this.resetValues()
+  }
+
+  resetValues(){
+    this.username = ''
+    this.userAge  = ''
   }
 }
