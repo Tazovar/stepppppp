@@ -3,16 +3,18 @@
 </div>
 
 
-<div class="cards_contaienr">
-<ng-container *ngFor="let user of array;let userIndex = index">
-<app-card [userObject]="user"
- [index]="userIndex" 
- (deleteEventEmitter)="deleteEventEmitterSub($event)"
- (updateEventEmitter)="updateEventEmitterSub($event)"
- ></app-card>
-</ng-container>
 
-<ng-container *ngIf="array.length == 0">
-    <p>იუზერი ჯერ არ არსებობს</p>
-</ng-container>
+
+<div class="users_container" #myContainer>
+    <ng-container *ngIf="usersArray.length > 0;else errorText">
+        <ng-container *ngFor="let user of usersArray">
+            <app-user [myUser]="user"></app-user>
+        </ng-container>
+    </ng-container>
 </div>
+
+
+
+<ng-template #errorText>
+    <h1 style="text-align: center;">not found user</h1>
+</ng-template>

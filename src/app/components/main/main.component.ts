@@ -7,22 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './main.component.css'
 })
 export class MainComponent {
-array:Array<any> = [];
+usersArray:any[] = [];
 
-userObjectEmitterSubscriber(event:any){
-  this.array.push(event);
-}
 
-deleteEventEmitterSub(index:number){
-  this.array.splice(index,1)
-}
+userObjectEmitterSubscriber(userObject:any):void{
+this.usersArray.push(userObject);
+console.log(this.usersArray,'from main.component.ts');
 
-updateEventEmitterSub(updateData:any){
-let object = this.array[updateData.index];
-
-if(object){
-  object.age = updateData.updateAge
-}
 
 }
 }

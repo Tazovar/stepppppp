@@ -1,13 +1,28 @@
-<div class="main_container">
 <form (ngSubmit)="onFormSubmit()">
     <div class="user_name_container">
-        <input type="text" placeholder="username" name="userName" [(ngModel)]="username">
+        <input type="text" [(ngModel)]="userObject.userName"
+         name="userName" placeholder="userName">
     </div>
-
-    <div class="age_container">
-        <input type="number" placeholder="age" [(ngModel)]="userAge" name="userAge">
+    <div class="user_lastName_container">
+        <input type="text" [(ngModel)]="userObject.userLastName" 
+        name="userLastName"
+        placeholder="userLastName">
     </div>
-
-    <button type="submit">submit</button>
+    <div class="user_age_container">
+        <input type="number" [(ngModel)]="userObject.userAge"
+         name="userAge"
+         placeholder="userAge">
+    </div>
+    <div class="user_gander_container">
+        <input type="text" [(ngModel)]="userObject.userGander" 
+        name="userGander"
+        placeholder="userGander">
+    </div>
+    <div class="user_hobby_container">
+        <input type="text" 
+        [(ngModel)]="userObject.userHobby"
+         name="userHobby"
+         placeholder="userHobby">
+    </div>
+<button type="submit">add</button>
 </form>
-</div>
