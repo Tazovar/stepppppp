@@ -7,13 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './main.component.css'
 })
 export class MainComponent {
-usersArray:any[] = [];
+carsArray:Array<any> = []
 
-
-userObjectEmitterSubscriber(userObject:any):void{
-this.usersArray.push(userObject);
-console.log(this.usersArray,'from main.component.ts');
-
-
-}
+  carObjectEmitterSubscriber(event:any):void{
+    this.carsArray.push(event)
+    console.log(this.carsArray);
+    
+  }
 }

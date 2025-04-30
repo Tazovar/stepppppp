@@ -7,30 +7,25 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './form.component.css'
 })
 export class FormComponent {
-  @Output() userObjectEmitter:EventEmitter<any> = new EventEmitter();
-  userObject:any = this.createUserObject();
+  carObject:any = this.createCarObject();
+  @Output() carObjectEmitter:EventEmitter<any> = new EventEmitter();
 
 
-  createUserObject():any{
+  createCarObject():any{
     return {
-      userName:'',
-      userLastName:'',
-      userAge:'',
-      userGander:'',
-      userHobby:''
+      carName:'',
+      carModel:'',
+      carYear:''
     }
   }
 
-
-  resetValues():void{
-    for(let key in this.userObject){
-      this.userObject[key] = '';
-    }
-  }
 
   onFormSubmit():void{
-    let userObjectCopy = {...this.userObject}
-    this.userObjectEmitter.emit(userObjectCopy);
-      this.resetValues()
+    if(!this.carObject.carName || !this.carObject.carModel || !this.carObject.carYear){
+      alert('please fill inputs')
+    }else{
+      let copyCarObject = {...this.carObject}
+      this.carObjectEmitter.emit(copyCarObject)
+    }
   }
 }

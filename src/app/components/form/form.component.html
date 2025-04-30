@@ -1,28 +1,22 @@
 <form (ngSubmit)="onFormSubmit()">
-    <div class="user_name_container">
-        <input type="text" [(ngModel)]="userObject.userName"
-         name="userName" placeholder="userName">
-    </div>
-    <div class="user_lastName_container">
-        <input type="text" [(ngModel)]="userObject.userLastName" 
-        name="userLastName"
-        placeholder="userLastName">
-    </div>
-    <div class="user_age_container">
-        <input type="number" [(ngModel)]="userObject.userAge"
-         name="userAge"
-         placeholder="userAge">
-    </div>
-    <div class="user_gander_container">
-        <input type="text" [(ngModel)]="userObject.userGander" 
-        name="userGander"
-        placeholder="userGander">
-    </div>
-    <div class="user_hobby_container">
+    <div class="car_name_container">
         <input type="text" 
-        [(ngModel)]="userObject.userHobby"
-         name="userHobby"
-         placeholder="userHobby">
+        name="carName" 
+        placeholder="car name"
+        [(ngModel)]="carObject.carName">
     </div>
-<button type="submit">add</button>
+    <div class="car_model_container">
+        <input type="text"
+         name="carModel"
+         placeholder="car model"
+         [(ngModel)]="carObject.carModel">
+    </div>
+
+    <div class="card_year_container">
+        <input type="text" 
+        name="carYear"
+        placeholder="car year"
+        [(ngModel)]="carObject.carYear">
+    </div>
+<button type="submit">submit form</button>
 </form>

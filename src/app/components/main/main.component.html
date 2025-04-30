@@ -1,20 +1,17 @@
 <div class="form_container">
-    <app-form (userObjectEmitter)="userObjectEmitterSubscriber($event)"></app-form>
+    <app-form (carObjectEmitter)="carObjectEmitterSubscriber($event)"></app-form>
 </div>
 
 
-
-
-<div class="users_container" #myContainer>
-    <ng-container *ngIf="usersArray.length > 0;else errorText">
-        <ng-container *ngFor="let user of usersArray">
-            <app-user [myUser]="user"></app-user>
+<div class="cars_container">
+    <ng-container *ngIf="carsArray.length > 0;else notFoundCar" >
+        <ng-container *ngFor="let car of carsArray">
+            <app-card [carObject]="car"></app-card>
         </ng-container>
     </ng-container>
 </div>
 
 
-
-<ng-template #errorText>
-    <h1 style="text-align: center;">not found user</h1>
+<ng-template #notFoundCar>
+<p>Car not found</p>
 </ng-template>
