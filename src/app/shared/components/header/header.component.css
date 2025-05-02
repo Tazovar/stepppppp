@@ -1,0 +1,16 @@
+
+nav{
+    position: fixed !important;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.nav-link{
+    cursor: pointer !important;
+}
+.activee{
+    color: red !important;
+    font-weight: bold !important;
+}
+
