@@ -3,29 +3,34 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './pages/components/home/home.component';
+import { AboutComponent } from './pages/components/about/about.component';
+import { ContactComponent } from './pages/components/contact/contact.component';
+import { ProfileComponent } from './pages/components/profile/profile.component';
+
+import { ToDoComponent } from './pages/components/profile/components/to-do/to-do.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { HomeComponent } from './components/home/home.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { AboutComponent } from './components/about/about.component';
-import { RouterModule } from '@angular/router';
-import { AuthComponent } from './components/auth/auth.component';
-import { LoginComponent } from './components/auth/components/login/login.component';
-import { RegisterComponent } from './components/auth/components/register/register.component';
+import { CardComponent } from './pages/components/profile/components/to-do/components/card/card.component';
+import { FormComponent } from './pages/components/profile/components/to-do/components/form/form.component';
+import { CaruselComponent } from './pages/components/home/components/carusel/carusel.component';
+import { HomeInfoComponent } from './pages/components/home/components/home-info/home-info.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    ProfileComponent,
+    CardComponent,
+    FormComponent,
+    ToDoComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
-    ContactComponent,
-    AboutComponent,
-    AuthComponent,
-    LoginComponent,
-    RegisterComponent,
-    
+    CaruselComponent,
+    HomeInfoComponent,
   ],
   imports: [
     BrowserModule,

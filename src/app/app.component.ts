@@ -7,19 +7,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css'],
   standalone: false,
 })
-export class AppComponent implements OnInit  {
+export class AppComponent  {
 
-constructor(private activatedRoute:ActivatedRoute){}
-
-  ngOnInit(): void {
-    this.activatedRoute.fragment.subscribe((res:any) => {
-      console.log(res);    
-      this.scroll(res) 
-    })
-  }
-
-
-  scroll(elementName:string){
-    document.getElementById(elementName)?.scrollIntoView({behavior:'smooth'})
-  }
 }

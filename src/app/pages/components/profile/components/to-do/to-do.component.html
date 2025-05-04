@@ -1,0 +1,20 @@
+<button type="button" class="btn-close" routerLink="/profile" aria-label="Close"></button>
+
+<div class="form_container">
+    <app-form></app-form>
+</div>
+
+
+<div class="cards_container">
+    <ng-container *ngIf="commonService.getArray().length > 0;else error">
+        <ng-container *ngFor="let lisItem of commonService.getArray()">
+            <app-card [card]="lisItem"></app-card>
+        </ng-container>
+    </ng-container>
+</div>
+
+
+
+<ng-template #error>
+    <p class="text-center">not found</p>
+</ng-template>
