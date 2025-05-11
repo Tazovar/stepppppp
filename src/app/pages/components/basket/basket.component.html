@@ -1,0 +1,21 @@
+<ng-container *ngIf="basketArray.length > 0;else error">
+    <div class="
+    basket_container
+    d-flex 
+    justify-content-center 
+    align-items-center
+    gap-5
+    flex-wrap
+    ">
+
+    </div>
+<ng-container *ngFor="let item of basketArray">
+    <app-basket-item 
+    (deleteCardEmitter)="deleteCardEmitterSub($event)"
+    (updateCardEmitter)="updateCardEmitterSub($event)" [card]="item"></app-basket-item>
+</ng-container>
+</ng-container>
+
+<ng-template #error>
+<p class="text-center">basket is empty</p>
+</ng-template>

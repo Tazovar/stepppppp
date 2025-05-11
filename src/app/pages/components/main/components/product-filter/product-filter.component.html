@@ -1,0 +1,44 @@
+<form (ngSubmit)="onFormSubmit()">
+    <fieldset>
+      <legend>ფილტრი</legend>
+      <div class="mb-3">
+        <label for="spicinessInput" class="form-label">სიმწარის დონე</label>
+        <input type="text" id="spicinessInput"
+        [(ngModel)]="filterObject.spiciness"
+        name="spiciness"
+         class="form-control" placeholder="სიმწარის დონე">
+      </div>
+      <div class="mb-3">
+        <label for="nutsSelect" class="form-label">თხილიანი</label>
+        <select id="nutsSelect" class="form-select"
+        name="nuts"
+         [(ngModel)]="filterObject.nuts">
+          <option value="">აირჩიეთ</option>
+          <option [value]="true">თხილიანი</option>
+          <option [value]="false">თხილის გარეშე</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="vegeterianSelect" class="form-label">ვეგეტარიანული</label>
+        <select id="noVegeterianSelect"
+        name="vegeterian" class="form-select" [(ngModel)]="filterObject.vegeterian">
+          <option value="">აირჩიეთ</option>
+          <option [value]="true">ვეგეტარიანულია</option>
+          <option [value]="false">არ არის ვეგეტარიანული</option>
+        </select>
+      </div>
+      
+      <div class="mb-3">
+        <label for="categoriesSelect" class="form-label">კატეგორიები</label>
+        <select 
+        name="categoryId"
+        id="categoriesSelect" class="form-select" 
+        [(ngModel)]="filterObject.categoryId">
+          <option value="">აირჩიეთ</option>
+          <option *ngFor="let cateogry of categoriesArray" [value]="cateogry.id">{{cateogry.name}}</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </fieldset>
+  </form>

@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+    <img [src]="item.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">Price:{{item.price}}$</p>
+      <p>{{item.nuts ? 'თხილიანია' : 'თხილის გარეშეა'}}</p>
+      <p>{{item.vegeterian ? 'ვეგეტარიანულია' : 'არ არის ვეგეტარიანული'}}</p>
+      <p>{{item.spiciness  > 0 ? `მწარეა დონე:${item.spiciness}` : 'არ არის მწარე'}}</p>
+      <a  class="btn btn-primary" (click)="onAddToCartBtnClick()">Add to cart</a>
+    </div>
+  </div>
