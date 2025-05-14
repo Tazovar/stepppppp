@@ -1,0 +1,65 @@
+<h1 #h1>Hello</h1>
+<form #myForm="ngForm" (ngSubmit)="onFromSubmit(myForm)" class="container mt-4">
+  <div class="form-group mb-3">
+    <label for="userName" class="form-label">User Name</label>
+    <input
+      type="text"
+      id="userName"
+      placeholder="Enter user name"
+      name="userName"
+      ngModel
+      required
+      minlength="4"
+      maxlength="15"
+      pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[!@#\$%\^&\*]).+$"
+      #userName="ngModel"
+      class="form-control"
+      [ngClass]="{ 'is-invalid': userName.invalid && userName.dirty }"
+    />
+
+    
+    <div
+    
+      class="invalid-feedback"
+      *ngIf="userName.invalid && userName.dirty && userName.hasError('pattern')"
+    >
+      ფორმატი არის არასწორი
+    </div>
+    <div
+      class="invalid-feedback"
+      *ngIf="userName.invalid && userName.dirty && userName.hasError('required')"
+    >
+      გთხოვთ შეავსოთ ველი
+    </div>
+    <div
+      class="invalid-feedback"
+      *ngIf="userName.invalid && userName.dirty && userName.hasError('minlength')"
+    >
+      გთხოვთ ჩაწეროთ მინიმუმ <strong>{{userName.getError('minlength').requiredLength}}</strong>
+      სიმბოლო (მიმდინარე რაოდენობა არის <strong>{{userName.getError('minlength').actualLength}}</strong>)
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="userLastName" class="form-label">User Last Name</label>
+    <input
+      type="text"
+      id="userLastName"
+      placeholder="Enter user last name"
+      name="userLastName"
+      ngModel
+      required
+      #userLastName="ngModel"
+      class="form-control"
+      [ngClass]="{ 'is-invalid': userLastName.invalid && userLastName.dirty }"
+    />
+       <div
+      class="invalid-feedback"
+      *ngIf="userLastName.invalid && userLastName.dirty && userLastName.hasError('required')"
+    >
+      გთხოვთ შეავსოთ ველი
+    </div>
+  </div>
+
+  <button  [disabled]="myForm.invalid" type="submit" class="btn btn-primary w-100">Click Me</button>
+</form>

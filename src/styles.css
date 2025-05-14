@@ -2,3 +2,13 @@
 h1{
     color: red;
 }
+
+
+
+.ng-invalid.ng-dirty:not([ngModelGrop]):not(form){
+    border: 1px solid red;
+}
+
+.ng-valid.ng-dirty:not([ngModelGrop]):not(form){
+    border: 1px solid green;
+}

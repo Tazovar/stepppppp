@@ -1,0 +1,12 @@
+<div class="form_container">
+    <app-form (formEmitter)="formEmitterSub($event)"></app-form>
+</div>
+
+
+<div class="carts_container">
+    <ng-container *ngIf="array.length  > 0">
+        <ng-container *ngFor="let item of array">
+            <app-cart [user]="item"></app-cart>
+        </ng-container>
+    </ng-container>
+</div>
