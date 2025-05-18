@@ -5,10 +5,10 @@ h1{
 
 
 
-.ng-invalid.ng-dirty:not([ngModelGrop]):not(form){
+/* .ng-invalid.ng-dirty:not([ngModelGrop]):not(form){
     border: 1px solid red;
 }
 
 .ng-valid.ng-dirty:not([ngModelGrop]):not(form){
     border: 1px solid green;
-}
+} */
