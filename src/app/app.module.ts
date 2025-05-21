@@ -8,6 +8,7 @@ import { MainComponent } from './pages/main/main.component';
 import { FormComponent } from './pages/main/components/form/form.component';
 import { CartComponent } from './pages/main/components/cart/cart.component';
 import { ReactiveFormComponent } from './pages/main/components/reactive-form/reactive-form.component';
+import { CustomPipe } from './pipes/custom.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ReactiveFormComponent } from './pages/main/components/reactive-form/rea
     FormComponent,
     CartComponent,
     ReactiveFormComponent,
+    CustomPipe,
   ],
   imports: [
     BrowserModule,

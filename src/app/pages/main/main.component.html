@@ -2,15 +2,32 @@
     <app-form (formEmitter)="formEmitterSub($event)"></app-form>
 </div>
 
+<!-- <h1 class="text-center">{{test | uppercase}}</h1> -->
+<!-- <h1 class="text-center">{{test | lowercase}}</h1> -->
+<!-- <h1 class="text-center">{{test | currency:'EUR'}}</h1> -->
+<!-- <h1 class="text-center">{{test | date: 'YYYY-dd-MM'}}</h1> -->
+<!-- <h1 class="text-center">{{test | json}}</h1> -->
+
+
 
 
 <div class="reactive_form_container">
     <app-reactive-form></app-reactive-form>
 </div>
+
+
 <div class="carts_container">
+    <h1>{{array | custom}}</h1>
     <ng-container *ngIf="array.length  > 0">
         <ng-container *ngFor="let item of array">
             <app-cart [user]="item"></app-cart>
         </ng-container>
     </ng-container>
 </div>
+
+
+<ng-container *ngIf="data$ | async as myData">
+    <ng-container *ngFor="let item of myData">
+        <img [src]="item.image" alt="">
+    </ng-container>
+</ng-container>
