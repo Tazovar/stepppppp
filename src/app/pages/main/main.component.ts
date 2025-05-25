@@ -37,7 +37,7 @@ ngOnInit(): void {
     // })
 }
 getAllProducts(){
-this.data$ = this.proxyService.getAllProducts()
+// this.data$ = this.proxyService.getAllProducts()
 }
 
   formEmitterSub(event:NgForm){
