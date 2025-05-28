@@ -27,8 +27,10 @@
          -->
          <!-- <button mat-stroked-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button> -->
           <br>
+
+          
         <mat-form-field>
-            <input type="text" matInput [(ngModel)]="testText">
+            <input type="text" matInput [(ngModel)]="testText" >
         </mat-form-field>
         <button (click)="onOpenMatDialogBtnClick()" mat-raised-button>confirm and open</button>
 
@@ -38,3 +40,15 @@
 <p><mat-slide-toggle [(ngModel)]="asd"></mat-slide-toggle></p>
 <h1>{{asd ? 'ღიაა' : 'დაკეტილია'}}</h1>
 <router-outlet></router-outlet>
+
+
+
+<button [appTest]="num1 > num2">saf</button>
+<!-- <ng-container *ngFor="let user of array">
+{{user.age}}
+{{user.lastName}}
+{{user.name}}
+</ng-container> -->
+
+{{num1}}
+<button (click)="num1 = num1 + 1">plus</button>

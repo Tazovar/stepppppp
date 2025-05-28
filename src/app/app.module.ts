@@ -18,6 +18,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './modals/dialog/dialog.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatBadgeModule} from '@angular/material/badge';
+import { TestDirective } from './directives/test.directive';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     ReactiveFormComponent,
     CustomPipe,
     DialogComponent,
+    TestDirective,
   ],
   imports: [
     BrowserModule,
